@@ -1,0 +1,128 @@
+Question 1- Explain the difference between frontend, backend, and full-stack development with
+suitable real-world examples.
+Answer 1- 
+Frontend development deals with everything that user can see and interact with directly, on a website
+or an app. It focuses on user interface(UI) and user Experience(UX).
+Techlogies we use there are-
+HTML, CSS, JavaScript
+Example- If we think of amazon website, the images of the product, where they are displayed, how 
+they are displayed, add to cart button etc.
+
+Backend development focuses on the server side, the part which is not visible to the user. It includes
+handling data and logic behind the scenes
+Techlogies used-
+Python, java, php, MySQL, MongoDB etc.
+Example- In the same example the product we select and add to cart, is stored in the backend in the database
+all the interactions we make with any webpage or website are stored there.
+
+FullStack development works on both frontend plus backend, it means integrating both the sides, the
+user side and the server side.
+Technologies used-
+A mix of both what we have discussed earlier
+Example- The full fledge website of amazon which is working.
+
+
+Question 2- Create a simple diagram showing how the client-server model works in web architecture. 
+Answer 3-
+
+
+Question 3- Describe how a browser requests and displays a web page from a web server.
+Answer 3- When a user enters a web address (URL) into the browser, the following steps occur:
+DNS Resolution:
+The browser first contacts a Domain Name System (DNS) server to translate the website’s domain name
+(e.g., www.google.com) into its corresponding IP address, which identifies the web server on the internet.
+
+Establishing a Connection:
+The browser then establishes a connection to the web server using HTTP or HTTPS protocol (via TCP/IP).
+In case of HTTPS, an SSL/TLS handshake occurs to ensure secure communication.
+
+Sending the Request:
+The browser sends an HTTP request to the web server asking for the web page’s content (usually an HTML file).
+
+Server Processing:
+The web server receives the request, processes it, and may interact with a database or backend 
+application to gather data.Then, it sends back an HTTP response, which includes the requested HTML 
+file and possibly links to other resources like CSS, JavaScript, and images.
+
+Receiving and Rendering the Page:
+The browser receives the HTML file and starts rendering it:
+
+
+
+Question 4- Identify and list the tools required to set up a web development environment. 
+Explain the purpose of each.
+Answer 4- Text editor to write code, browser to view it, server to host it, version control to track changes, package
+manager for libraries, and database to store data.
+
+
+Question 5- Explain what a web server is and give examples of commonly used servers. 
+Answer 5- A web server is a software and hardware system that stores, processes, and delivers
+web pages to users upon request via the HTTP or HTTPS protocol. When user’s browser requests a webpage,
+the web server finds the requested file and sends it back to the browser for displaying it to the user.
+It can also handle server-side scripts, manage security, and process API requests.
+
+Examples of Commonly Used Web Servers:
+Apache HTTP Server – Open-source and widely used for hosting websites.
+Microsoft IIS (Internet Information Services) – Used in Windows environments.
+Node.js – Used to create lightweight, event-driven web servers for dynamic applications.
+
+
+
+Question 6- Define the roles of a frontend developer, backend developer, and database administrator in a project.
+Answer 6-
+Frontend Developer- Designs and develops the user interface of the website. They work with HTML, CSS, 
+and JavaScript to ensure the site is attractive, responsive, and easy to use.
+Backend Developer- Handles the server-side logic. They write code to manage data processing, user 
+authentication, APIs, and communication between the database and frontend.
+Database Administrator-	Manages the database systems, ensuring data integrity, security, backups, and performance 
+optimization. They design database schemas and maintain data availability.
+
+Example:
+In an online shopping website:
+The frontend developer builds the product pages and shopping cart interface.
+The backend developer handles the logic for adding items to the cart and processing orders.
+The database administrator manages the storage of product details, user accounts, and transaction data.
+
+
+Question 8- Explain the difference between static and dynamic websites. Provide an example of each. 
+Answer 8- A static website is one in which the content remains fixed and does not change unless manually updated 
+by the developer. Each page is written in HTML and looks the same for every visitor. Static websites are simple, 
+load quickly, and are mainly used for small sites such as personal portfolios, company profiles, or informational pages. 
+For example, a portfolio website showing a designer’s work and contact details is a static website.
+
+A dynamic website, on the other hand, displays content that changes based on user interactions, time, or data stored 
+in a database. These websites use server-side scripting languages such as PHP, Python, or Node.js to generate pages dynamically. 
+The content updates automatically according to user input or database queries. Examples of dynamic websites include Facebook and Amazon, 
+where the content varies for each user based on their profile, searches, and activity.
+
+In short, static websites are fixed and fast, while dynamic websites are interactive and database-driven.
+
+
+Question 9- Research and list five web browsers. Explain how rendering engines differ between them.
+Answer 9- There are several popular web browsers used to access and display web pages. 
+Five commonly used ones are Google Chrome, Mozilla Firefox, Apple Safari, Microsoft Edge, and Opera.
+
+Google Chrome uses the Blink rendering engine, which is known for its speed, stability, and support for modern web standards. 
+It efficiently processes HTML, CSS, and JavaScript to display web pages smoothly.
+
+Mozilla Firefox uses the Gecko engine, developed by Mozilla, which is open-source and designed to 
+support a wide range of web technologies while offering strong customization options.
+
+Apple Safari runs on the WebKit engine, which focuses on performance and energy efficiency, 
+especially optimized for Apple devices like macOS and iOS.
+
+Microsoft Edge, in its latest version, also uses the Blink engine (earlier it used EdgeHTML). 
+This change improved its performance and compatibility with modern web applications.
+
+Opera also uses the Blink engine (previously it used Presto) and is known for additional features 
+like a built-in VPN and data-saving mode.
+
+In essence, a rendering engine is the component of a browser that interprets HTML, CSS, and JavaScript and 
+displays the web page on the screen. Different browsers use different engines, which is why the same website 
+may appear or behave slightly differently across browsers.
+
+
+
+Question 10- Draw a labeled diagram showing the basic web architecture flow — client, server, database, and APIs.
+Answer 10-
+
