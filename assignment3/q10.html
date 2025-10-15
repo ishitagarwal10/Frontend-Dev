@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 10: Dropdown Selections</title>
+</head>
+<body>
+
+    <h1>Select Your Location & Preferences</h1>
+
+    <form>
+        <p>
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="usa">USA</option>
+                <option value="canada" selected>Canada</option>
+                <option value="uk">United Kingdom</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="state">State:</label>
+            <select id="state" name="state">
+                <option value="ontario" selected>Ontario</option>
+                <option value="quebec">Quebec</option>
+                <option value="british-columbia">British Columbia</option>
+            </select>
+        </p>
+        
+        <p>
+            <label for="city">City:</label>
+            <select id="city" name="city">
+                <option value="toronto" selected>Toronto</option>
+                <option value="montreal">Montreal</option>
+                <option value="vancouver">Vancouver</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="tourist-place">Favorite Tourist Place:</label>
+            <select id="tourist-place" name="tourist-place">
+                <option value="cn-tower" selected>CN Tower</option>
+                <option value="niagara-falls">Niagara Falls</option>
+                <option value="stanley-park">Stanley Park</option>
+            </select>
+        </p>
+    </form>
+    
+    <hr>
+    
+    <p>
+        <strong>Your choices are summarized as follows:</strong> You selected Canada, specifically the city of Toronto in the state of Ontario, and your favorite tourist place is the CN Tower.
+    </p>
+
+</body>
+</html>
