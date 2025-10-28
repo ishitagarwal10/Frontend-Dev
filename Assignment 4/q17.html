@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 17: Form Submission to Iframe</title>
+</head>
+<body>
+
+    <h1>Form with Iframe Target</h1>
+
+    <form action="result.html" target="resultFrame">
+        <label for="data">Enter some data:</label>
+        <input type="text" id="data" name="data">
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+    <p>The result of the form submission will appear below:</p>
+    <iframe name="resultFrame" width="400" height="100" style="border:1px solid black;">
+        </iframe>
+
+</body>
+</html>

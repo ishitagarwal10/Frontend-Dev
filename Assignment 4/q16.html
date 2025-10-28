@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 16: URI Encoding</title>
+</head>
+<body>
+
+    <h1>URI Encoding Example</h1>
+
+    <p>
+        A URL cannot contain spaces or certain special characters like '&'. They must be "percent-encoded".
+    </p>
+
+    <p>
+        <b>Incorrect Link (with special characters):</b><br>
+        <code>https://example.com/search?query=HTML & CSS</code>
+    </p>
+
+    <p>
+        <b>Correct Encoded Link:</b><br>
+        <a href="https://example.com/search?query=HTML%20%26%20CSS">
+            https://example.com/search?query=HTML%20%26%20CSS
+        </a>
+    </p>
+    <p>
+        In the corrected link, the space is encoded as <code>%20</code> and the ampersand is encoded as <code>%26</code>.
+    </p>
+
+</body>
+</html>

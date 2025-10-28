@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 19: Form Security</title>
+</head>
+<body>
+
+    <h1>Secure Form Example</h1>
+
+    <form action="#" autocomplete="off">
+        <div>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <br>
+        <div>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <h3>Why turn off autocomplete?</h3>
+    <p>
+        Turning off autocomplete (<code>autocomplete="off"</code>) can enhance security on shared or public computers.
+        It prevents the browser from saving and auto-filling sensitive information like passwords, credit card numbers,
+        or personal data, reducing the risk of that information being accessed by another user of the same device.
+    </p>
+
+</body>
+</html>
