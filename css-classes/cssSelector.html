@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4: CSS Selectors</title>
+    <link rel="stylesheet" href="cssSelector.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Selectors Practice</h1>
+    </header>
+    
+    <main>
+        <h2>Element Selector</h2>
+        <p>This paragraph is styled by an <strong>element selector</strong> (p).</p>
+        <p>This paragraph is also styled by the (p) selector.</p>
+
+        <hr>
+
+        <h2>Class and ID Selectors</h2>
+        <div class="highlight">
+            <p>This div has a <code>class="highlight"</code>, so it gets a yellow background.</p>
+        </div>
+        <div id="unique-section">
+            <p>This div has an <code>id="unique-section"</code>, so it gets a blue border.</p>
+        </div>
+
+        <hr>
+        
+        <h2>Attribute Selector</h2>
+        <p>This link goes nowhere: <a href="#">Normal link</a></p>
+        <p>This link opens in a new tab and is styled by an <strong>attribute selector</strong> <code>[target="_blank"]</code>:
+           <a href="#" target="_blank">New Tab Link</a>
+        </p>
+
+        <hr>
+        
+        <h2>Combinators</h2>
+        
+        <section class="combinator-box">
+            <h3>Descendant Combinator (space)</h3>
+            <p>This <code>p</code> is a direct child.</p>
+            <div>
+                <p>This <code>p</code> is a <strong>descendant</strong> inside a div, so it is italic.</p>
+            </div>
+        </section>
+
+        <section class="combinator-box">
+            <h3>Child Combinator (>)</h3>
+            <p>This <code>p</code> is a <strong>direct child</strong> of the section, so it is bold.</p>
+            <div>
+                <p>This <code>p</code> is NOT a direct child, so it is not bold.</p>
+            </div>
+        </section>
+        
+        <section class="combinator-box">
+            <h3>Adjacent Sibling (+)</h3>
+            <p>This <code>p</code> is not affected.</p>
+            <h4>A heading</h4>
+            <p>This <code>p</code> is the <strong>adjacent sibling</strong> right after the h4, so its top margin is removed.</p>
+            <p>This <code>p</code> is not adjacent, so it has normal margin.</p>
+        </section>
+        
+        <section class="combinator-box">
+            <h3>General Sibling (~)</h3>
+            <h5>Another heading</h5>
+            <div>A div element</div>
+            <p>This <code>p</code> is a <strong>general sibling</strong> after the h5, so it is underlined.</p>
+            <p>This <code>p</code> is also a general sibling, so it is also underlined.</p>
+        </section>
+
+    </main>
+    
+    <footer>
+        <p>End of Selectors Page</p>
+    </footer>
+</body>
+</html>

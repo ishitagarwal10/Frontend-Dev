@@ -1,0 +1,108 @@
+/* --- Global Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+/* --- Flexbox Layout --- */
+main {
+    /* Center content vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 1rem;
+}
+
+.examples-container {
+    /* Distribute examples evenly */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center;
+    gap: 2.5rem; /* Space between items */
+    margin-top: 2rem;
+}
+
+/* --- Base Button Style --- */
+.combo-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    
+    /* Define all properties that will be transitioned.
+      This ensures a smooth animation for all changes.
+    */
+    transition: 
+        transform 0.3s ease-in-out,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out,
+        opacity 0.3s ease-in-out;
+}
+
+/* --- Example 1: Grow & Change Color --- */
+.color-change {
+    background-color: #2980b9;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(41, 128, 185, 0.3);
+}
+
+/* :hover combines transform and color change */
+.color-change:hover {
+    background-color: #e74c3c; /* Change color */
+    transform: scale(1.1); /* Grow */
+    box-shadow: 0 6px 15px rgba(231, 76, 60, 0.4);
+}
+
+/* :active adds another transform */
+.color-change:active {
+    transform: scale(1.05); /* Slightly shrink from hover */
+}
+
+/* --- Example 2: Lift & Add Shadow --- */
+.shadow-lift {
+    background-color: #27ae60;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(39, 174, 96, 0.2);
+}
+
+.shadow-lift:hover {
+    transform: translateY(-5px); /* Lift up */
+    box-shadow: 0 10px 20px rgba(39, 174, 96, 0.4); /* Enhance shadow */
+}
+
+.shadow-lift:active {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(39, 174, 96, 0.3);
+}
+
+/* --- Example 3: Spin & Fade --- */
+.spin-fade {
+    background-color: #8e44ad;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(142, 68, 173, 0.3);
+}
+
+.spin-fade:hover {
+    transform: rotate(10deg) scale(1.05); /* Tilt/spin and grow */
+    opacity: 0.9; /* Slightly fade */
+    box-shadow: 0 6px 15px rgba(142, 68, 173, 0.4);
+}
+
+.spin-fade:active {
+    transform: rotate(5deg) scale(1);
+    opacity: 1;
+}
+
+/* --- :focus state for all --- */
+.combo-button:focus {
+    /* Add a consistent focus ring for accessibility */
+    outline: 3px solid #34495e;
+    outline-offset: 4px;
+}

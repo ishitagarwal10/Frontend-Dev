@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 8: Box-Sizing</title>
+    <link rel="stylesheet" href="BoxSizeComp.css">
+</head>
+<body>
+    <main>
+        <h1>Box-Sizing Comparison</h1>
+        
+        <section class="container">
+            <div class="box content-box">
+                <code>box-sizing: content-box;</code> (Default)
+            </div>
+            
+            <div class="box border-box">
+                <code>box-sizing: border-box;</code>
+            </div>
+        </section>
+        
+        <section class="explanation">
+            <h2>How it works:</h2>
+            <p>Both boxes are set to <code>width: 300px</code>, <code>padding: 20px</code>, and <code>border: 10px</code>.</p>
+            <ul>
+                <li>The <strong><code>content-box</code></strong> (left) adds padding and border *outside* its 300px width.
+                    <br>Total Width = 300px (width) + 40px (padding) + 20px (border) = <strong>360px</strong>.
+                </li>
+                <li>The <strong><code>border-box</code></strong> (right) includes padding and border *inside* its 300px width.
+                    <br>Total Width = <strong>300px</strong>.
+                </li>
+            </ul>
+            <p><code>border-box</code> is generally more intuitive for layout design.</p>
+        </section>
+    </main>
+</body>
+</html>

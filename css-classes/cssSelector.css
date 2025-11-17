@@ -1,0 +1,98 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+}
+
+/* --- Semantic Structure Styling --- */
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #444;
+    color: #fff;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto; /* Center main content */
+    padding: 0 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #2c3e50;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 2rem 0;
+}
+
+.combinator-box {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Selector Demonstrations --- */
+
+/* 1. Element Selector */
+/* Selects all <p> elements on the page */
+p {
+    color: #555;
+}
+
+/* 2. Class Selector */
+/* Selects any element with class="highlight" */
+.highlight {
+    background-color: #fffbe6;
+    border: 1px solid #ffe58f;
+    padding: 0.5rem;
+}
+
+/* 3. ID Selector */
+/* Selects the single element with id="unique-section" */
+#unique-section {
+    border: 2px solid #007bff;
+    padding: 0.5rem;
+}
+
+/* 4. Attribute Selector */
+/* Selects <a> elements that have a target="_blank" attribute */
+a[target="_blank"] {
+    color: #28a745; /* Green */
+    font-weight: bold;
+}
+
+/* 5. Combinator: Descendant (space) */
+/* Selects any <p> that is *inside* a .combinator-box (at any level) */
+.combinator-box p {
+    font-style: italic;
+}
+
+/* 6. Combinator: Child (>) */
+/* Selects any <p> that is a *direct child* of a .combinator-box */
+/* We override the previous rule for this specific case */
+.combinator-box > p {
+    font-weight: bold;
+    font-style: normal; /* Reset italic */
+}
+
+/* 7. Combinator: Adjacent Sibling (+) */
+/* Selects the <p> that *immediately follows* an <h4> */
+h4 + p {
+    margin-top: 0; /* Remove top margin for a tighter fit */
+    color: #d9534f; /* Reddish color */
+}
+
+/* 8. Combinator: General Sibling (~) */
+/* Selects all <p> elements that are siblings *after* an <h5> */
+h5 ~ p {
+    text-decoration: underline;
+    color: #5bc0de; /* Bluish color */
+}

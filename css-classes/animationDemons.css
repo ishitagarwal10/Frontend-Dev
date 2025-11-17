@@ -1,0 +1,109 @@
+/* --- Global Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    margin: 0;
+}
+
+/* --- Flexbox Centering --- */
+main {
+    /* Center all animation wrappers vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 3rem; /* Space between animations */
+    text-align: center;
+}
+
+.animation-wrapper {
+    background: #34495e;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 300px;
+}
+
+/* --- Animation 1: Moving Box --- */
+
+/* Keyframes definition */
+@keyframes slide {
+    0% {
+        transform: translateX(-100px);
+        background-color: #e74c3c;
+    }
+    50% {
+        transform: translateX(100px);
+        background-color: #3498db;
+    }
+    100% {
+        transform: translateX(-100px);
+        background-color: #e74c3c;
+    }
+}
+
+.moving-box {
+    width: 60px;
+    height: 60px;
+    background-color: #e74c3c;
+    margin: 1rem auto 0;
+    
+    /* Apply the animation */
+    animation-name: slide;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; /* Loop forever */
+}
+
+/* --- Animation 2: Bouncing Ball --- */
+
+/* Keyframes definition */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+        animation-timing-function: ease-in; /* Fall fast */
+    }
+    50% {
+        transform: translateY(-80px);
+        animation-timing-function: ease-out; /* Rise slow */
+    }
+}
+
+.bouncing-ball {
+    width: 50px;
+    height: 50px;
+    background-color: #f1c40f;
+    border-radius: 50%; /* Make it a circle */
+    margin: 1rem auto 0;
+
+    /* Apply the animation */
+    animation-name: bounce;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+/* --- Animation 3: Color-Changing Text --- */
+
+/* Keyframes definition */
+@keyframes color-fade {
+    0% { color: #1abc9c; }
+    33% { color: #e67e22; }
+    66% { color: #9b59b6; }
+    100% { color: #1abc9c; }
+}
+
+.color-text {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+
+    /* Apply the animation */
+    animation-name: color-fade;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s; /* Wait half a second before starting */
+    animation-direction: alternate; /* Go forwards, then backwards */
+}

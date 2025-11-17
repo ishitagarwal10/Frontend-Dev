@@ -1,0 +1,99 @@
+/* --- Global Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+main {
+    padding: 1rem;
+}
+
+/* --- Flexbox Layout --- */
+.examples-container {
+    display: flex; /* Use Flexbox */
+    flex-direction: row; /* Align in a row */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    justify-content: space-around; /* Distribute items evenly */
+    gap: 1rem; /* Space between items */
+}
+
+.example-box {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+    /* Flex item properties */
+    flex-basis: 300px; /* Each item will have a base width */
+    flex-grow: 1; /* Allow items to grow */
+    min-height: 200px;
+}
+
+.example-box h2 {
+    margin-top: 0;
+    color: #005a9c;
+}
+
+/* --- Pseudo-Class Examples --- */
+
+/* 1. :hover */
+.example-box a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.example-box a:hover {
+    color: #e74c3c; /* Change color on hover */
+}
+
+/* 2. :focus */
+.example-box button {
+    padding: 0.5rem 1rem;
+    border: 2px solid #555;
+    border-radius: 5px;
+    background-color: #eee;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.example-box button:focus {
+    outline: 3px solid #007bff; /* Add outline on focus */
+    outline-offset: 2px;
+    background-color: #e6f2ff;
+}
+
+/* 3. :active */
+.example-box button:active {
+    transform: scale(0.95); /* Scale down when pressed */
+    background-color: #ddd;
+}
+
+/* 4. :nth-child */
+.example-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.example-box li {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
+.example-box li:nth-child(odd) {
+    background-color: #f9f9f9; /* Style odd children */
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1: Pseudo-Classes</title>
+    <link rel="stylesheet" href="psedoClass.css">
+</head>
+<body>
+    <header>
+        <h1>Pseudo-Class Demonstration</h1>
+    </header>
+    
+    <main>
+        <section class="examples-container">
+            
+            <article class="example-box">
+                <h2>:hover</h2>
+                <a href="#">Hover over me</a>
+                <p>This link changes color when you mouse over it using <code>:hover</code>.</p>
+            </article>
+
+            <article class="example-box">
+                <h2>:focus</h2>
+                <button type="button">Click to focus</button>
+                <p>This button gets a blue outline when you click it or tab to it using <code>:focus</code>.</p>
+            </article>
+
+            <article class="example-box">
+                <h2>:active</h2>
+                <button type="button">Click and hold</button>
+                <p>This button scales down while you are actively pressing it using <code>:active</code>.</p>
+            </article>
+
+            <article class="example-box">
+                <h2>:nth-child()</h2>
+                <ul>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                    <li>Fourth item</li>
+                </ul>
+                <p>The odd-numbered list items (1, 3) have a light gray background using <code>:nth-child(odd)</code>.</p>
+            </article>
+
+        </section>
+    </main>
+    
+    <footer>
+        <p>Pseudo-Classes Practice</p>
+    </footer>
+</body>
+</html>

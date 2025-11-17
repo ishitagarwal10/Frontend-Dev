@@ -1,0 +1,108 @@
+/* --- Global Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+/* --- Flexbox Layout --- */
+main {
+    /* Center the button rows vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 1.5rem; /* Space between rows */
+}
+
+.button-row {
+    /* Align buttons in a row with spacing */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    justify-content: center;
+    gap: 1rem; /* Space between buttons */
+}
+
+/* --- Base Button Style --- */
+.btn {
+    /* Sizing and Spacing */
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    
+    /* Appearance */
+    border: 2px solid transparent; /* Reserve space for outline border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    
+    /* Effects */
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Button Variations --- */
+
+/* 1. Primary Button */
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* 2. Secondary Button */
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(108, 117, 125, 0.2);
+}
+
+/* 3. Outline Button */
+.btn-outline {
+    background-color: #fff;
+    color: #007bff;
+    border-color: #007bff;
+}
+
+/* --- Pseudo-Class Effects --- */
+
+/* :hover (for all non-disabled buttons) */
+.btn:not(:disabled):hover {
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.btn-outline:not(:disabled):hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* :active (for all non-disabled buttons) */
+.btn:not(:disabled):active {
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* :focus (for accessibility) */
+.btn:focus {
+    outline: 3px solid #0056b3;
+    outline-offset: 3px;
+}
+/* Specific focus for outline button to avoid double border */
+.btn-outline:focus {
+    outline-color: #007bff;
+}
+
+/* :disabled */
+.btn:disabled {
+    background-color: #e9ecef;
+    color: #adb5bd;
+    border-color: #e9ecef;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.btn-outline:disabled {
+    background-color: #fff;
+    color: #adb5bd;
+    border-color: #e9ecef;
+}
