@@ -1,0 +1,21 @@
+*{box-sizing:border-box}
+body{font-family:Arial;margin:2rem;color:#102a43}
+/* ATTRIBUTE SELECTOR: targets text inputs specifically */
+input[type="text"]{padding:.5rem;border:2px solid #cbd5e1;border-radius:6px}
+/* ATTRIBUTE STARTS-WITH: links that begin with https */
+a[href^="https"]{font-weight:700;text-decoration:none;color:#0b66ff}
+/* PSEUDO-CLASS: focus styling */
+input:focus{outline:3px solid rgba(11,102,255,0.18)}
+/* NTH-CHILD example */
+.items li:nth-child(odd){background:#f1f6ff;padding:.5rem}
+.items li:nth-child(even){background:#fff;padding:.5rem}
+/* COMBINATORS */
+/* direct child selector */
+form > label{display:block;margin-bottom:0.5rem}
+/* adjacent sibling */
+label + label{margin-left:0}
+/* general sibling (~) */
+.links ~ .items{margin-top:1rem}
+/* PSEUDO-ELEMENTS */
+.items li::before{content:"• ";color:#0b66ff;font-weight:700}
+/* comments explaining each selector type are placed above each rule */

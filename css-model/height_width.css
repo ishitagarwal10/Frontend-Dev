@@ -1,0 +1,50 @@
+*{box-sizing:border-box}
+body,html{
+    height:100%;
+    margin:0;
+    font-family:Arial, sans-serif}
+.wrap{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    background:#eef4ff
+}
+.box-container{
+    display:flex;
+    gap:1rem;
+    align-items:center;
+    justify-content:center
+}
+.box{
+    background:#fff;
+    padding:1rem;
+    border-radius:8px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.06);
+    text-align:center;
+    overflow:auto
+}
+.px{
+    width:300px;
+    height:200px;
+    background:#ffdada
+}
+.pct{
+    width:40%;
+    min-height:150px;
+    max-width:360px;
+    background:#dff7e2
+}
+.vh{
+    width:220px;
+    height:30vh;
+    max-width:280px;
+    background:#e8f0ff
+}
+/* Demonstrate overflow property — add long content to show scroll */
+.pct::after{
+    content:"\A This demonstrates overflow behaviour when content exceeds the box. Add more text to test scrolling.";
+    white-space:pre-wrap;
+    display:block;
+    margin-top:.5rem
+}
