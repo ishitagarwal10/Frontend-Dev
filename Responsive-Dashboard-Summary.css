@@ -1,0 +1,49 @@
+/* Responsive-Dashboard-Summary.css */
+/* Grid-based dashboard with header, sidebar left and content; sidebar moves to top below 750px */
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,Arial,sans-serif;background:#f7fbff;color:#122;padding:1rem}
+.dash-header{ padding:1rem 0; text-align:center; }
+
+/* grid layout */
+.dash-grid{
+  display:grid;
+  grid-template-columns: 240px 1fr;
+  gap:1rem;
+  align-items:start;
+}
+
+/* sidebar */
+.sidebar{ background:#fff; padding:1rem; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.05) }
+.sidebar nav a{ display:block; padding:.5rem 0; color:#0b3a66; text-decoration:none }
+
+/* main content */
+.main-content{}
+
+/* cards grid inside main content */
+.cards{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:1rem;
+}
+.card{
+  background:#fff;
+  padding:1rem;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(15,20,30,.05);
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-align:center;
+}
+
+/* hover scale + shadow */
+.card:hover{ transform: scale(1.03); box-shadow:0 12px 30px rgba(15,20,30,.08); }
+
+/* simple load animation */
+@keyframes pop { from{ transform: scale(.98); opacity:0 } to{ transform:none; opacity:1 } }
+.cards .card{ animation: pop .4s ease both; }
+
+/* responsive: below 750px, sidebar shifts to top and content stacks below */
+@media (max-width:750px){
+  .dash-grid{ grid-template-columns: 1fr; }
+  .cards{ grid-template-columns: 1fr; }
+}

@@ -1,0 +1,38 @@
+/* Combined-Responsive-Web-Demo.css */
+/* Header with flexbox, main content grid with three sections that stack below 700px. Fade-in and hover transitions. */
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,Arial,sans-serif;color:#222}
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;padding:1rem;background:#f7fbff;border-bottom:1px solid #e9f0f7;
+}
+.main-nav a{ margin-left:1rem;text-decoration:none;color:#333}
+
+/* main layout uses grid */
+.layout{
+  display:grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  gap:1rem;
+  padding:1.25rem;
+  align-items:start;
+  animation: fadeIn .6s ease both;
+}
+@keyframes fadeIn{ from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none} }
+
+.gallery-preview img{ width:100%; height:140px; object-fit:cover; border-radius:6px; transition: filter .3s ease; }
+.gallery-preview img:hover{ filter: brightness(.95) contrast(1.05); }
+
+/* small gallery grid */
+.grid-small{ display:grid; grid-template-columns: repeat(3,1fr); gap: .5rem; }
+
+/* text & cheat styling */
+.text-preview, .cheat-preview{ background:#fff;padding:1rem;border-radius:8px; box-shadow:0 6px 18px rgba(15,20,30,.05) }
+
+/* footer */
+.site-footer{ text-align:center;padding:1rem;background:#fafcff;margin-top:1rem }
+
+/* responsive: below 700px stack vertically */
+@media (max-width:700px){
+  .layout{ grid-template-columns: 1fr; }
+  .grid-small{ grid-template-columns: repeat(2,1fr); }
+}

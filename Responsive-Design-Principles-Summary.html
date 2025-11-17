@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Responsive Design Principles</title>
+  <link rel="stylesheet" href="Responsive-Design-Principles-Summary.css"/>
+</head>
+<body>
+  <main class="principles">
+    <section class="box">
+      <h3>Fluid Layouts</h3>
+      <p>Layouts that adapt to available width using relative units like % and fr.</p>
+      <pre><code>grid-template-columns: 1fr 2fr;</code></pre>
+    </section>
+
+    <section class="box">
+      <h3>Flexible Media</h3>
+      <p>Use max-width:100% and object-fit for images and videos.</p>
+      <pre><code>img{ max-width:100%; height:auto; }</code></pre>
+    </section>
+
+    <section class="box">
+      <h3>Breakpoints</h3>
+      <p>Choose breakpoints for common device widths and adjust layout.</p>
+      <pre><code>@media (max-width:600px){...}</code></pre>
+    </section>
+  </main>
+</body>
+</html>
