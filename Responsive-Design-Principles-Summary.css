@@ -1,0 +1,21 @@
+/* Responsive-Design-Principles-Summary.css */
+/* Grid with three boxes, hover gradient and change text color, single column under 600px */
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,Arial,sans-serif;padding:1rem;background:#fff}
+
+/* grid */
+.principles{ display:grid; gap:1rem; grid-template-columns: repeat(3, 1fr); align-items:start; }
+
+/* box aesthetic */
+.box{ background:#fff; padding:1rem; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.05); transition: background .25s ease, color .25s ease; }
+.box h3{ margin-bottom:.5rem }
+.box pre{ background:#f5f7fb;padding:.5rem;border-radius:4px; overflow:auto }
+
+/* hover gradient and text color change */
+.box:hover{ background: linear-gradient(135deg,#e8f7ff,#fff1ff); color:#0b3a66 }
+
+/* single column under 600px */
+@media (max-width:600px){
+  .principles{ grid-template-columns: 1fr; }
+}

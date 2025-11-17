@@ -1,0 +1,30 @@
+/* Filter-Comparison-Layout.css */
+/* Two images side-by-side on desktop; right image has filter removed on hover. Stack below 700px */
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,Arial,sans-serif;padding:1rem;background:#fff}
+.compare{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:1rem;
+  align-items:start;
+}
+
+/* image panels */
+.side{ background:#fff;border-radius:8px;overflow:hidden; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,.05) }
+.side img{ width:100%; height:360px; object-fit:cover; transition: filter .4s ease; display:block; }
+
+/* apply filter to right image */
+.filtered img{ filter: contrast(.7) brightness(.85); }
+
+/* on hover, filter fades away */
+.filtered:hover img{ filter: none; }
+
+/* captions */
+.side figcaption{ padding:.6rem; font-size:.95rem; }
+
+/* stack vertically below 700px */
+@media (max-width:700px){
+  .compare{ grid-template-columns: 1fr; }
+  .side img{ height:320px; }
+}
