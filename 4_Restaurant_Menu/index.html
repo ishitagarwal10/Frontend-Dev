@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha4-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <header class="py-5 bg-white shadow-sm">
+        <div class="container">
+            <h1 class="text-center fw-bold">The Golden Fork</h1>
+            <p class="lead text-center text-muted">Today's Menu & Chef's Specials</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row g-5">
+
+            <div class="col-md-8">
+                <h2 class="mb-4">Main Menu</h2>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Classic Margherita Pizza</td>
+                                <td>Main Course</td>
+                                <td>$12.50</td>
+                            </tr>
+                            <tr>
+                                <td>Caesar Salad</td>
+                                <td>Appetizer</td>
+                                <td>$8.00</td>
+                            </tr>
+                            <tr>
+                                <td>Spaghetti Carbonara</td>
+                                <td>Main Course</td>
+                                <td>$14.00</td>
+                            </tr>
+                            <tr>
+                                <td>Grilled Salmon</td>
+                                <td>Main Course</td>
+                                <td>$18.50</td>
+                            </tr>
+                            <tr>
+                                <td>Tiramisu</td>
+                                <td>Dessert</td>
+                                <td>$7.00</td>
+                            </tr>
+                            <tr>
+                                <td>Bruschetta</td>
+                                <td>Appetizer</td>
+                                <td>$6.50</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                
+                <h2 class="mb-4">Chef's Specials</h2>
+                <ul class="list-group shadow-sm">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Truffle Risotto
+                        <span class="badge bg-primary rounded-pill">$22.00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Duck Confit
+                        <span class="badge bg-primary rounded-pill">$24.00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Lava Cake
+                        <span class="badge bg-primary rounded-pill">$9.50</span>
+                    </li>
+                </ul>
+
+                <figure class="mt-5">
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" 
+                         class="img-fluid rounded shadow-lg" 
+                         alt="A beautifully plated dish of food">
+                    <figcaption class="figure-caption text-center fst-italic mt-2">
+                        Our famous seasonal special, prepared fresh daily.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4 mt-5 border-top bg-white">
+        <div class="container">
+            <p class="text-center text-muted mb-0">&copy; 2025 The Golden Fork</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

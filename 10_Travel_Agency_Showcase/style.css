@@ -1,0 +1,18 @@
+/* style.css */
+/* This file is for Q10 custom styles */
+
+.carousel-img {
+    /* Sets a fixed height for all carousel images */
+    height: 60vh; /* 60% of the viewport height */
+    
+    /* Ensures the image covers the area without distortion */
+    object-fit: cover;
+    
+    /* Adds a dark overlay so white caption text is always readable */
+    filter: brightness(0.8);
+}
+
+/* Positions the caption text more nicely */
+.carousel-caption {
+    bottom: 3rem;
+}

@@ -1,0 +1,9 @@
+
+/* style.css for 4_Restaurant_Menu */
+:root {
+  --primary:#4f46e5; /* custom light theme primary */
+}
+body { background: #f8fafc; }
+.bg-gradient { background: linear-gradient(90deg, rgba(79,70,229,0.9), rgba(99,102,241,0.9)); }
+.transition { transition: box-shadow .25s ease, transform .15s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0,0,0,0.08); }

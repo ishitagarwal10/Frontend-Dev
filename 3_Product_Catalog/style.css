@@ -1,0 +1,19 @@
+/* Ensures all card images are the same height */
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Prevents images from stretching */
+}
+
+/* 1. Custom class for the product card */
+.product-card {
+    /* 'transition' makes the shadow change smoothly */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* 2. Hover Effect */
+.product-card:hover {
+    /* 'shadow-lg' is a larger Bootstrap shadow utility */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; 
+    /* Lifts the card up slightly on hover */
+    transform: translateY(-5px);
+}

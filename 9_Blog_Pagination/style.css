@@ -1,0 +1,16 @@
+
+
+/* * Ensures the main content takes up at least the full
+ * viewport height (100vh), which pushes the footer
+ * to the bottom of the screen on pages without much content.
+*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* This makes the <main> element grow to fill any remaining space */
+main {
+    flex: 1;
+}
