@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Simple Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; background:#f3f3f3; }
+        .calc { background:#fff; padding:16px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.1); width:260px; }
+        #display { background:#222; color:#fff; font-size:28px; padding:12px; border-radius:6px; text-align:right; margin-bottom:10px; min-height:46px; }
+        .keys { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+        button { padding:14px; font-size:18px; border-radius:6px; border: none; cursor:pointer; }
+        .num { background:#e6e6e6; }
+        .op { background:#ffb86b; color:#fff; }
+        .equals { grid-column:span 2; background:#4caf50; color:#fff; }
+        .clear { grid-column:span 2; background:#ff6b6b; color:#fff; }
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <div id="display">0</div>
+        <div class="keys">
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button class="op" onclick="pressOp('/')">÷</button>
+            <button class="op" onclick="pressOp('*')">×</button>
+
+            <button class="num" onclick="pressNum('7')">7</button>
+            <button class="num" onclick="pressNum('8')">8</button>
+            <button class="num" onclick="pressNum('9')">9</button>
+            <button class="op" onclick="pressOp('-')">−</button>
+
+            <button class="num" onclick="pressNum('4')">4</button>
+            <button class="num" onclick="pressNum('5')">5</button>
+            <button class="num" onclick="pressNum('6')">6</button>
+            <button class="op" onclick="pressOp('+')">+</button>
+
+            <button class="num" onclick="pressNum('1')">1</button>
+            <button class="num" onclick="pressNum('2')">2</button>
+            <button class="num" onclick="pressNum('3')">3</button>
+            <button class="equals" onclick="calculate()">=</button>
+
+            <button class="num" onclick="pressNum('0')" style="grid-column:span2">0</button>
+            <button class="num" onclick="pressDecimal()">.</button>
+        </div>
+    </div>
+
+    <script>
+        const display = document.getElementById('display');
+        const ops = ['+','-','*','/'];
+
+        function clearDisplay() {
+            display.textContent = '0';
+        }
+
+        function pressNum(d) {
+            if (display.textContent === '0') display.textContent = d;
+            else display.textContent += d;
+        }
+
+        function pressOp(op) {
+            const txt = display.textContent;
+            const last = txt[txt.length - 1];
+            // prevent two operators in a row
+            if (ops.includes(last)) {
+                display.textContent = txt.slice(0, -1) + op;
+            } else {
+                display.textContent += op;
+            }
+        }
+
+        function pressDecimal() {
+            // allow one decimal per current number
+            const txt = display.textContent;
+            // find last operator position
+            let lastOpPos = -1;
+            for (let i = txt.length - 1; i >= 0; i--) {
+                if (ops.includes(txt[i])) { lastOpPos = i; break; }
+            }
+            const currentNumber = txt.slice(lastOpPos + 1);
+            if (!currentNumber.includes('.')) {
+                display.textContent += '.';
+            }
+        }
+
+        function calculate() {
+            try {
+                const result = eval(display.textContent);
+                display.textContent = String(result);
+            } catch (e) {
+                display.textContent = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>
