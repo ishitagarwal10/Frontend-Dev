@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Product Card Layout</title>
+  <style>
+    /* --- General Styles --- */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    /* --- Product Grid --- */
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    /* --- Product Card --- */
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-content h3 {
+      margin: 10px 0;
+      color: #222;
+    }
+
+    .product-content p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .product-content button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .product-content button:hover {
+      background-color: #0056b3;
+    }
+
+    /* --- Responsive Media Queries --- */
+
+    /* Tablet: 2 columns */
+    @media (max-width: 1024px) {
+      .product-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile: 1 column */
+    @media (max-width: 600px) {
+      .product-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Products</h1>
+
+  <div class="product-container">
+    <div class="product-card">
+      <img src="computer.png" alt="Product 1">
+      <div class="product-content">
+        <h3>Product 1</h3>
+        <p>High-quality item with amazing design and features.</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="phone.png" alt="Product 2">
+      <div class="product-content">
+        <h3>Product 2</h3>
+        <p>Stylish and affordable, perfect for daily use.</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="tablet.png" alt="Product 3">
+      <div class="product-content">
+        <h3>Product 3</h3>
+        <p>Durable, modern, and built for performance.</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="earbuds.png" alt="Product 4">
+      <div class="product-content">
+        <h3>Product 4</h3>
+        <p>Elegant product crafted with care and precision.</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

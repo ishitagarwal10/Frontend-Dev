@@ -1,0 +1,54 @@
+/* Filter-Cards-With-Animation.css */
+/* Three profile cards using flexbox, image filters removed on hover, page load fade-in */
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,Arial,sans-serif;background:#f5f7fb;padding:2rem}
+
+/* fade-in keyframes */
+@keyframes fadeIn {
+  from { opacity:0; transform: translateY(8px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+
+/* container */
+.profiles{
+  display:flex;
+  gap:1rem;
+  justify-content:space-between;
+  animation: fadeIn .7s ease both;
+}
+
+/* card */
+.card{
+  flex:1 1 0;
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(15,20,30,.06);
+  transition: transform .25s ease;
+  text-align:center;
+}
+
+/* image with initial filter */
+.card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
+  filter: grayscale(.95);
+  transition: filter .35s ease, transform .25s ease;
+}
+
+/* info */
+.card .info{ padding:1rem; }
+.card h3{ margin-bottom:.25rem }
+
+/* hover: remove filter and lift card */
+.card:hover img{ filter: none; transform: scale(1.02); }
+.card:hover{ transform: translateY(-10px); }
+
+/* stack vertically on screens smaller than 800px */
+@media (max-width:800px){
+  .profiles{ flex-direction:column; }
+  .card img{ height:320px; }
+}

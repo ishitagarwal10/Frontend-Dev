@@ -1,0 +1,34 @@
+/* Responsive-CSS-Cheat-Sheet.css */
+/* Grid of topics that becomes stacked rows below 700px where headings act like keys */
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,Arial,sans-serif;background:#fff;padding:1rem;color:#111}
+header, footer { text-align:center; padding:.75rem; background:#f8fafc; }
+
+/* grid layout */
+.cheats{
+  display:grid;
+  gap:1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  padding:1rem;
+}
+
+/* box styling */
+.box{
+  background:#fbfdff;
+  padding:1rem;
+  border-radius:8px;
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+  transition: transform .2s ease, background .25s ease;
+}
+.box h2{ margin-bottom:.5rem; font-size:1.05rem }
+.box p{ font-size:.95rem; color:#333 }
+
+/* hover interactivity */
+.box:hover{ transform: translateY(-6px); background: linear-gradient(180deg,#ffffff,#f0fbff); }
+
+/* small screens: below 700px stack rows and make header act like key with value below */
+@media (max-width:700px){
+  .cheats{ grid-template-columns: 1fr; }
+  .box{ display:block; }
+}

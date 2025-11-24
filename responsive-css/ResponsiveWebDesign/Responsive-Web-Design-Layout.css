@@ -1,0 +1,42 @@
+/* Responsive-Web-Design-Layout.css */
+/* Flexbox header + three horizontally arranged feature boxes that stack under 750px */
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,Segoe UI,Arial,sans-serif;line-height:1.4;color:#111}
+
+/* header */
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem;
+  background:#f4f7fb;
+}
+.logo{font-weight:700;font-size:1.25rem}
+.nav a{margin-left:1rem;text-decoration:none;color:#333}
+
+/* main features: horizontal using flexbox */
+.features{
+  display:flex;
+  gap:1rem;
+  padding:2rem;
+  justify-content:space-between;
+}
+.feature{
+  flex:1 1 0;
+  padding:1.25rem;
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+  transition: transform .25s ease;
+  text-align:center;
+}
+.feature:hover{ transform: scale(1.03); }
+
+/* footer centered */
+.site-footer{ text-align:center; padding:1rem; background:#fafafa; margin-top:1rem; }
+
+/* responsive: below 750px, stack features vertically */
+@media (max-width:750px){
+  .features{ flex-direction:column; padding:1rem; }
+}
