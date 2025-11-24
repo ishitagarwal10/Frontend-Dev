@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Dashboard Grid Layout */
+.dashboard {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    background-color: #2c3e50;
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #34495e;
+    padding: 2rem 0;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav a:hover {
+    background-color: #2c3e50;
+}
+
+/* Main Content with Grid */
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    padding: 2rem;
+    background-color: #ecf0f1;
+}
+
+/* Boxes */
+.box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.box p {
+    color: #7f8c8d;
+}
+
+/* Wide box spanning 2 columns */
+.wide {
+    grid-column: span 2;
+}
+
+/* Hover Effects */
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main";
+    }
+    
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .wide {
+        grid-column: span 1;
+    }
+}
