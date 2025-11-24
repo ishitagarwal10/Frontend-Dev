@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3: Course Registration Form</title>
+</head>
+<body>
+
+    <h1>Course Registration</h1>
+
+    <form>
+        <fieldset>
+            <legend>Student Information</legend>
+            <p>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name">
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Course Selection</legend>
+            <p>
+                <label for="course">Select a Course:</label>
+                <select id="course" name="course">
+                    <option value="cs101">Introduction to Computer Science</option>
+                    <option value="wd202">Web Development Fundamentals</option>
+                    <option value="ds303">Data Structures and Algorithms</option>
+                </select>
+            </p>
+        </fieldset>
+        
+        <p>
+            <input type="submit" value="Register">
+        </p>
+    </form>
+    
+    <hr>
+    
+    <h2>Available Course Schedules</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Instructor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday & Wednesday</td>
+                <td>10:00 AM - 11:30 AM</td>
+                <td>Dr. Smith</td>
+            </tr>
+            <tr>
+                <td>Tuesday & Thursday</td>
+                <td>2:00 PM - 3:30 PM</td>
+                <td>Prof. Jones</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
