@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Goal Tracker</title>
+    <link rel="stylesheet" href="step.css">
+</head>
+<body>
+
+    <header>
+        <h1>👟 Step Goal Tracker</h1>
+        <p>Track your daily step progress</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Enter Today's Steps</h2>
+
+            <input type="number" id="steps" placeholder="Enter steps taken">
+
+            <button onclick="checkGoal()">Check Progress</button>
+
+            <h3 id="message"></h3>
+
+            <!-- Circular Progress Bar -->
+            <div class="progress-circle">
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70" id="progressBar"></circle>
+                </svg>
+                <div class="number" id="stepPercent">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkGoal() {
+            let steps = parseInt(document.getElementById("steps").value);
+            const goal = 10000;
+
+            if (isNaN(steps) || steps < 0) {
+                document.getElementById("message").innerText = "Please enter valid steps!";
+                return;
+            }
+
+            // Ternary operator
+            let result = steps >= goal ? "🎉 Goal Achieved!" : "💪 Keep Going!";
+
+            document.getElementById("message").innerText = result;
+
+            // Calculate progress %
+            let percent = Math.min((steps / goal) * 100, 100);
+
+            // Update circle progress
+            let circle = document.getElementById("progressBar");
+            let dash = 440 - (440 * percent / 100);
+            circle.style.strokeDashoffset = dash;
+
+            // Update text %
+            document.getElementById("stepPercent").innerText = percent.toFixed(0) + "%";
+        }
+    </script>
+
+</body>
+</html>

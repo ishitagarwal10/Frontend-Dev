@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grocery.css">
+    <title>Grocery Bill Calculator</title>
+
+    <script>
+        function calculateBill() {
+            const price = parseFloat(document.getElementById('price').value);
+            const quantity = parseInt(document.getElementById('quantity').value);
+
+            if (isNaN(price) || isNaN(quantity) || price <= 0 || quantity <= 0) {
+                document.getElementById('finalAmount').innerText = "Please enter valid values!";
+                return;
+            }
+
+            let total = price * quantity;
+
+            if (total > 1000) {
+                total = total - (total * 0.10);
+                document.getElementById('discountMsg').innerText = "A 10% discount has been applied!";
+            } else {
+                document.getElementById('discountMsg').innerText = "";
+            }
+
+            document.getElementById('finalAmount').innerText = "Final Amount (You will Pay): ₹" + total.toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>🛒 FreshMart Grocery Store</h1>
+        <p>Your trusted partner for fresh & affordable groceries.</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Grocery Bill Calculator</h2>
+
+            <label for="price">Price per Item (₹)</label>
+            <input type="number" id="price" placeholder="Enter price">
+
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" placeholder="Enter quantity">
+
+            <button onclick="calculateBill()">Calculate Bill</button>
+
+            <p id="discountMsg" class="discount"></p>
+            <h3 id="finalAmount"></h3>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 FreshMart Grocery Store • All Rights Reserved
+    </footer>
+
+</body>
+</html>

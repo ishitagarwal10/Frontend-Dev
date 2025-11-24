@@ -1,0 +1,77 @@
+<!--Task 2. BMI Calculator
+Scenario:A fitness website calculates BMI.Requirements:
+
+BMI = weight / (height * height)
+Use arithmetic operators
+Use comparison to display:
+Underweight / Normal / Overweight / Obese
+Add CSS progress bar
+website full header,div body and footer with separate stylesheet-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="BMI.css">
+    <title>BMI Calculator</title>
+    <script>
+        function calculateBMI() {
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value) / 100; // Convert cm to meters
+
+            if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+                document.getElementById('bmiResult').innerText = "Please enter valid values!";
+                document.getElementById('bmiCategory').innerText = "";
+                document.getElementById('bmiProgress').value = 0;
+                return;
+            }
+
+            const bmi = weight / (height * height);
+            let category = "";
+
+            if (bmi < 18.5) {
+                category = "Underweight";
+            } else if (bmi < 24.9) {
+                category = "Normal weight";
+            } else if (bmi < 29.9) {
+                category = "Overweight";
+            } else {
+                category = "Obese";
+            }
+
+            document.getElementById('bmiResult').innerText = "Your BMI: " + bmi.toFixed(2);
+            document.getElementById('bmiCategory').innerText = "Category: " + category;
+            document.getElementById('bmiProgress').value = Math.min(bmi, 40); // Cap progress bar at 40
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>🏋‍♂ BMI Calculator</h1>
+        <p>Calculate your Body Mass Index</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>BMI Calculator</h2>
+
+            <label for="weight">Weight (kg)</label>
+            <input type="number" id="weight" placeholder="Enter weight in kg">
+
+            <label for="height">Height (cm)</label>
+            <input type="number" id="height" placeholder="Enter height in cm">
+
+            <button onclick="calculateBMI()">Calculate BMI</button>
+
+            <h3 id="bmiResult"></h3>
+            <h3 id="bmiCategory"></h3>
+            <progress id="bmiProgress" max="40" value="0"></progress>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Fitness Pro
+    </footer>
+</body>
+</html>
