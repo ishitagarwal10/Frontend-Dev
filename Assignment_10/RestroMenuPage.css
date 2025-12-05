@@ -1,0 +1,9 @@
+/* Center list and style image */
+.special-list {
+    max-width: 400px;
+}
+
+.food-img {
+    max-height: 300px;
+    object-fit: cover;
+}

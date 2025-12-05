@@ -1,0 +1,25 @@
+body {
+    background-color: #f8fafc;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    background: #0066cc;
+    color: white;
+}
+
+.progress {
+    height: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+footer {
+    background: #004b99;
+    font-size: 0.9rem;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    text-shadow: 0px 2px 8px rgba(0,0,0,0.7);
+}

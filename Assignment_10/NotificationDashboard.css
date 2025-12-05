@@ -1,0 +1,10 @@
+/* Card spacing & styling improvements */
+.card {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Summary section look like a "well" */
+.summary-box {
+    font-size: 0.95rem;
+}

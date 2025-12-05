@@ -1,0 +1,8 @@
+/* Hero Section Custom Styling */
+.hero-section {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg') center/contain no-repeat,
+                linear-gradient(135deg, #0078D4, #005a99);
+    height: 85vh;
+    background-blend-mode: overlay;
+    background-size: cover;
+}

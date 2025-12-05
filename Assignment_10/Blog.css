@@ -1,0 +1,30 @@
+body {
+    background-color: #f9fafb;
+    font-family: "Poppins", sans-serif;
+}
+
+h2 {
+    font-weight: 700;
+    color: #222;
+}
+
+.page-link {
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.page-link:hover {
+    background-color: #ddd;
+    transition: 0.3s;
+}
+
+.btn-outline-secondary {
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #e4e4e4;
+    color: #000;
+    transition: 0.3s;
+}
