@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Dropdown</title>
+  <link rel="stylesheet" href="customDropdown.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      width: 200px;
+    }
+    .dropdown-btn {
+      padding: 8px 12px;
+      width: 100%;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      text-align: left;
+    }
+    .dropdown-options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      display: none;
+      max-height: 150px;
+      overflow-y: auto;
+      z-index: 1000;
+    }
+    .dropdown-options div {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    .dropdown-options div:hover {
+      background-color: #74b9ff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Custom Dropdown</h2>
+
+<div class="dropdown" id="myDropdown">
+  <div class="dropdown-btn" id="dropdownBtn">Select an option</div>
+  <div class="dropdown-options" id="dropdownOptions">
+    <div>Option 1</div>
+    <div>Option 2</div>
+    <div>Option 3</div>
+    <div>Option 4</div>
+    <div>Option 5</div>
+  </div>
+</div>
+
+<script src="customDropdown.js"></script>
+</body>
+</html>

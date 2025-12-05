@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="formValidation.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    form { max-width: 300px; display: flex; flex-direction: column; }
+    label { margin-top: 10px; }
+    input { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    input.error { border-color: red; }
+    .error-msg { color: red; font-size: 0.9em; display: none; }
+    button { margin-top: 15px; padding: 8px 12px; cursor: pointer; }
+    #success { margin-top: 15px; color: green; font-weight: bold; display: none; }
+  </style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="regForm">
+  <label>Name:</label>
+  <input type="text" id="nameInput" placeholder="Enter name">
+  <div class="error-msg" id="nameError">Name is required</div>
+
+  <label>Email:</label>
+  <input type="email" id="emailInput" placeholder="Enter email">
+  <div class="error-msg" id="emailError">Enter a valid email</div>
+
+  <label>Password:</label>
+  <input type="password" id="passwordInput" placeholder="Enter password">
+  <div class="error-msg" id="passwordError">Password must be at least 6 characters</div>
+
+  <button type="submit">Submit</button>
+</form>
+
+<div id="success">Form Submitted Successfully!</div>
+
+<script src="formValidation.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Path & Coordinates Logger</title>
+  <link rel="stylesheet" href="mouseLogger.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #box {
+      width: 400px;
+      height: 400px;
+      border: 2px solid #2d3436;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    #coords { margin-top: 10px; font-weight: bold; }
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+
+<h2>Mouse Tracker Box</h2>
+
+<div id="box"></div>
+<div id="coords">X: 0, Y: 0</div>
+
+<script src="mouseLogger.js"></script>
+</body>
+</html>

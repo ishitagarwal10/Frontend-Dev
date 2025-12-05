@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Table Filter</title>
+  <link rel="stylesheet" href="tableFilter.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input { padding: 8px; width: 250px; margin-bottom: 15px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
+    tr.hidden { display: none; }
+    #noResults { display: none; color: red; font-weight: bold; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+<h2>Student Table</h2>
+
+<input type="text" id="searchInput" placeholder="Search students...">
+
+<table id="studentTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Branch</th>
+      <th>CGPA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>John Doe</td><td>CS</td><td>9.1</td></tr>
+    <tr><td>Jane Smith</td><td>IT</td><td>8.7</td></tr>
+    <tr><td>Mike Johnson</td><td>CS</td><td>7.5</td></tr>
+    <tr><td>Emily Davis</td><td>ECE</td><td>8.9</td></tr>
+    <tr><td>Robert Brown</td><td>ME</td><td>7.8</td></tr>
+  </tbody>
+</table>
+
+<div id="noResults">No results found</div>
+
+<script src="tableFilter.js"></script>
+</body>
+</html>

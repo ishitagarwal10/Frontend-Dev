@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Character Counter</title>
+  <link rel="stylesheet" href="charCounter.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    textarea { width: 300px; height: 100px; padding: 8px; resize: none; }
+    #counter { margin-top: 5px; font-weight: bold; }
+    .normal { color: black; }
+    .warning { color: orange; }
+    .danger { color: red; }
+    button { margin-top: 10px; padding: 6px 12px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<h2>Live Character Counter</h2>
+
+<textarea id="textInput" placeholder="Type here..."></textarea>
+<div id="counter" class="normal">Remaining: 100</div>
+<button id="resetBtn">Reset</button>
+
+<script src="charCounter.js"></script>
+</body>
+</html>
